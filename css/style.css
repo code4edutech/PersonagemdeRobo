@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1e1e2f, #4e4e60);
+  font-family: Arial, sans-serif;
+}
+
+.robot {
+  position: relative;
+  width: 150px;
+  height: 250px;
+}
+
+/* Cabeça do Robô */
+.head {
+  width: 100px;
+  height: 80px;
+  background: #555;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Olhos */
+.eye {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  position: relative;
+}
+.eye::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background: #00ff7f;
+  border-radius: 50%;
+}
+
+/* Antena */
+.antenna {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 20px;
+  background: #f00;
+  border-radius: 5px;
+}
+.antenna::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+/* Corpo do Robô */
+.body {
+  position: absolute;
+  top: 80px;
+  left: 25px;
+  width: 100px;
+  height: 120px;
+  background: #666;
+  border-radius: 10px;
+}
+
+/* Detalhes no corpo */
+.body::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 80px;
+  height: 20px;
+  background: #333;
+  border-radius: 5px;
+}
+
+/* Braços do Robô */
+.arms {
+  position: absolute;
+  top: 90px;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.arm {
+  width: 20px;
+  height: 60px;
+  background: #777;
+  border-radius: 10px;
+}
+
+/* Pernas do Robô */
+.legs {
+  position: absolute;
+  bottom: 0;
+  left: 45px;
+  display: flex;
+  gap: 10px;
+}
+.leg {
+  width: 20px;
+  height: 50px;
+  background: #444;
+  border-radius: 10px;
+}
